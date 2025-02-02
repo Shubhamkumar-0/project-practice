@@ -22,3 +22,63 @@ body{
 .web{
    font-size: 20px; 
 }
+
+.form_container{
+    margin-top: 20px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+    /* display:flex; */
+}
+.form-control{
+    display:flex;
+    flex-direction: column;
+}
+label{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+input,select,textarea{
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+
+}
+textarea,input:focus{
+    outline-color: red;
+}
+.button_container{
+    display: flex;
+    justify-content: flex-end;
+    margin-top:20px ;
+
+}
+button{
+    background-color: silver;
+    border: transparent solid 2px ;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: 0.3s ease-out;
+
+}
+button:hover{
+    background-color: #ccc;
+    border: 2px solid black;
+    color: rgb(78, 17, 17);
+    transition: 0.3s ease-out;
+    cursor:pointer;
+}
+
+.text_control{
+    grid-column: 1 /span 2;
+}
+.text_control,textarea{
+    width: 100%;
+}
+
+@media(max-width:575px){
+    .text_control{
+        grid-column: 1/span 1;
+    }
+}
